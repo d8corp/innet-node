@@ -11,12 +11,19 @@ describe('@innet/node', () => {
     const close = Promise.withResolvers()
 
     const watcher = new Watch(() => {
-      innet(<Server onEnd={() => close.resolve(null)} onStart={() => open.resolve(null)}><HelloWorld /></Server>, handler)
+      innet((
+        <Server
+          onEnd={() => close.resolve(null)}
+          onStart={() => open.resolve(null)}
+          port={3000}>
+          <HelloWorld />
+        </Server>
+      ), handler)
     })
 
     await open.promise
 
-    const res = await fetch('http://localhost')
+    const res = await fetch('http://localhost:3000')
     const text = await res.text()
 
     expect(text).toBe('Hello, World!')
