@@ -8,8 +8,7 @@
 
 [![NPM](https://img.shields.io/npm/v/@innet/node.svg)](https://www.npmjs.com/package/@innet/node)
 [![downloads](https://img.shields.io/npm/dm/@innet/node.svg)](https://www.npmtrends.com/@innet/node)
-[![tests](https://img.shields.io/github/actions/workflow/status/d8corp/innet-node/node.js.yml?branch=main&label=tests
-)](https://github.com/d8corp/innet-node/actions/workflows/node.js.yml)
+[![tests](https://github.com/d8corp/innet-node/actions/workflows/tests.yml/badge.svg)](https://github.com/d8corp/innet-node/actions)
 [![changelog](https://img.shields.io/badge/Changelog-⋮-brightgreen)](https://changelogs.xyz/@innet/node)
 [![license](https://img.shields.io/npm/l/@innet/node)](https://github.com/d8corp/innet-node/blob/main/LICENSE)
 
