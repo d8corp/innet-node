@@ -32,4 +32,26 @@ describe('@innet/node', () => {
 
     await close.promise
   })
+  test('async component', async () => {
+    let count = 0
+
+    async function Foo () {
+      await new Promise(resolve => setTimeout(resolve, 100))
+      count++
+    }
+
+    innet((
+      <>
+        <Foo />
+        <Foo />
+        <Foo />
+      </>
+    ), handler)
+
+    expect(count).toBe(0)
+
+    await new Promise(resolve => setTimeout(resolve, 100))
+
+    expect(count).toBe(3)
+  })
 })
